@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <title>MPG Tracker</title>
+    </head>
+    <body class="page-recording-reset">
+        <div class="app">
+            <div class="navbar">
+                <img src="img/mpg-tracker-logo.png" class="nav-logo" />
+                <div class="burger-stack">
+                    <div class="burger-item"></div>
+                    <div class="burger-item"></div>
+                    <div class="burger-item"></div>
+                </div>
+            </div>
+            <div class="main-content">
+                <div class="container">
+                    <h1 class="car-name text-center"></h1>
+                    <h3 class="car-details text-center"></h3>
+
+                    <div class="pillbox mt-5">
+                        <h3>Are you sure?</h3>
+                        <p>This will erase your current recording.</p>
+
+                        <button type="button" class="btn btn-primary" id="recording-erase">Yes, continue</button>
+                        <a href="car-view.html" class="btn btn-primary">Back</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/lib/jquery.min.js"></script>
+        <script type="text/javascript" src="js/global.js"></script>
+        <script type="text/javascript" src="js/recording-reset.js"></script>
+    </body>
+</html>

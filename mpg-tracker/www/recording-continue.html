@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <title>MPG Tracker</title>
+    </head>
+    <body class="page-recording-continue">
+        <div class="app">
+            <div class="navbar">
+                <img src="img/mpg-tracker-logo.png" class="nav-logo" />
+                <div class="burger-stack">
+                    <div class="burger-item"></div>
+                    <div class="burger-item"></div>
+                    <div class="burger-item"></div>
+                </div>
+            </div>
+            <div class="main-content">
+                <div class="container">
+                    <h1 class="car-name text-center"></h1>
+                    <h3 class="car-details text-center"></h3>
+
+                    <div class="pillbox mt-5">
+                        <h3>Almost there</h3>
+                        <p class="mb-0">Please record your current mileage and the amount of litres of fuel it took to re-fill your tank.</p>
+                    </div>
+
+                    <form action="" method="get" id="recording-continue-form" class="mt-4">
+                        <label for="i-current-mileage">New mileage:</label>
+                        <input type="number" class="form-control" name="i-current-mileage" id="i-current-mileage" placeholder="e.g. 86321" />
+                        <p class="text-right">mi</p>
+                        <label for="i-litres-used">Litres used:</label>
+                        <input type="number" step="0.01" class="form-control" name="i-litres-used" id="i-litres-used" placeholder="e.g. 42.6" />
+                        <p class="text-right">l</p>
+                        <input type="submit" class="btn btn-primary mt-2" value="Next" />
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/lib/jquery.min.js"></script>
+        <script type="text/javascript" src="js/global.js"></script>
+        <script type="text/javascript" src="js/recording-continue.js"></script>
+    </body>
+</html>
