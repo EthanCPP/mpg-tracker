@@ -4,7 +4,7 @@
         <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
         <param name="onload" value="true" />
     </feature>
-    <name>mpgtracker</name>
+    <name>mpg Tracker</name>
     <description>
         Keep track of your car's MPG and get tips on improving it
     </description>

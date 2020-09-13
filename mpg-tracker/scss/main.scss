@@ -6,7 +6,10 @@ html,
 body {
     margin: 0;
     background-color: $color-back;
-    height: 100%;
+}
+
+body {
+    padding-bottom: 30px;
 }
 
 .app {
@@ -14,6 +17,27 @@ body {
     width: 100%;
     height: 100%;
     overflow-x: hidden;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparentize($color-back, 0.1);
+    transition: all 0.4s ease;  
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    display: block;
+    overflow-y: auto;
+    padding-top: 90px;
+
+    &.overlay-visible {
+        opacity: 1;
+        visibility: visible;
+    }
 }
 
 .navbar {
@@ -27,6 +51,7 @@ body {
     width: 100%;
     background-color: $color-front;
     border-bottom: 1px solid $color-divide;
+    z-index: 1000;
 
     .nav-logo {
         width: 170px;
@@ -47,6 +72,22 @@ body {
             width: 100%;
             height: 3px;
             background-color: $color-blue;
+            transition: all 0.6s cubic-bezier(.59,-1.04,.53,1.95);
+        }
+
+        &.menu-show {
+            .burger-item:first-child {
+                transform: translateY(10px) rotate(-45deg);
+            }
+
+            .burger-item:nth-child(2) {
+                transform: translateX(30px) rotate(180deg);
+                opacity: 0;
+            }
+
+            .burger-item:nth-child(3) {
+                transform: translateY(-10px) rotate(45deg);
+            }
         }
     }
 }
@@ -117,6 +158,26 @@ h3 {
     background-color: $color-front;
     border: 1px solid $color-divide;
     padding: 15px 20px;
+}
+
+.table-dark {
+    background-color: $color-back;
+
+    thead {
+        td {
+            border-top: none;
+            border-bottom: 1px solid $color-divide;
+        }
+    }
+
+    tbody {
+        tr:not(:last-child) {
+            td {
+                border-top: none;
+                border-bottom: 1px solid $color-divide;
+            }
+        }
+    }
 }
 
 .page-splash {

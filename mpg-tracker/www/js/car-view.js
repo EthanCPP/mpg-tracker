@@ -19,5 +19,17 @@ $(document).ready(function() {
             $('#data-recording').removeClass('d-none');
             $('#data-no-data').addClass('d-none');
         }
+
+        if (car_item.history) {
+            $('#data-history').removeClass('d-none');
+
+            Object.entries(car_item.history).forEach(item => {
+                const date = new Date(parseInt(item[0]));
+                const dateFormatted = date.getFullYear() + '-' + date.getMonth() + '-' + date.getDate();
+                const $historyRow = $(`<tr><td>${item[1].mpg}</td><td>${item[1].mileage_used} mi</td><td>${dateFormatted}</td></tr>`);
+
+                $('#data-history tbody').prepend($historyRow);
+            });
+        }
     }
 });

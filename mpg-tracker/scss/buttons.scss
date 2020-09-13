@@ -1,8 +1,18 @@
+.btn {
+    outline: none;
+    box-shadow: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+        outline: none !important;
+        box-shadow: none !important;
+    }
+}
+
 .btn-primary {
     background-color: $color-front;
     border-color: $color-blue;
-    outline: none;
-    box-shadow: none;
 
     &:hover,
     &:active,
@@ -10,8 +20,6 @@
     &[disabled] {
         background-color: $color-back !important;
         border-color: $color-divide !important;
-        outline: none !important;
-        box-shadow: none !important;
     }
 
     &[disabled] {

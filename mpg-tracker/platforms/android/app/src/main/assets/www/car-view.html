@@ -20,8 +20,8 @@
             </div>
             <div class="main-content">
                 <div class="container">
-                    <h1 class="car-name text-center"></h1>
-                    <h3 class="car-details text-center"></h3>
+                    <h1 class="car-name text-center">Loading..</h1>
+                    <h3 class="car-details text-center">Loading..</h3>
 
                     <div class="mpg-prompt-wrapper">
                         <div class="mpg-prompt">
@@ -43,6 +43,26 @@
                         <p><strong>Date:</strong> <span id="recording-date-start"></span></p>
                         <a href="recording-continue.html" class="btn btn-primary">Continue</a>
                         <a href="recording-reset.html" class="btn btn-primary">Reset</a>
+                    </div>
+
+                    <div class="pillbox d-none mt-3" id="data-history">
+                        <h3>History</h3>
+                        <table class="table table-dark mt-3 mb-0" id="history-table">
+                            <thead>
+                                <tr>
+                                    <td>mpg</td>
+                                    <td>distance</td>
+                                    <td>date</td>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+
+                    <div class="pillbox mt-3" id="destructive-pill">
+                        <h3>DELETE CAR</h3>
+                        <p>This operation is destructive and all data related to this car will be removed.</p>
+                        <a href="delete-car.html" class="btn btn-danger">Delete Car</a>
                     </div>
                 </div>
             </div>

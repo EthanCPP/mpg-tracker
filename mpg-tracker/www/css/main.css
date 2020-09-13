@@ -7153,30 +7153,53 @@ a.text-dark:hover, a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6; } }
 
-.btn-primary {
-  background-color: #1c2a35;
-  border-color: #76bce0;
+.btn {
   outline: none;
   box-shadow: none; }
-  .btn-primary:hover, .btn-primary:active, .btn-primary:focus, .btn-primary[disabled] {
-    background-color: #171e24 !important;
-    border-color: #36444f !important;
+  .btn:hover, .btn:active, .btn:focus {
     outline: none !important;
     box-shadow: none !important; }
+
+.btn-primary {
+  background-color: #1c2a35;
+  border-color: #76bce0; }
+  .btn-primary:hover, .btn-primary:active, .btn-primary:focus, .btn-primary[disabled] {
+    background-color: #171e24 !important;
+    border-color: #36444f !important; }
   .btn-primary[disabled] {
     color: #646b71; }
 
 html,
 body {
   margin: 0;
-  background-color: #171e24;
-  height: 100%; }
+  background-color: #171e24; }
+
+body {
+  padding-bottom: 30px; }
 
 .app {
   display: block;
   width: 100%;
   height: 100%;
   overflow-x: hidden; }
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(23, 30, 36, 0.9);
+  transition: all 0.4s ease;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  display: block;
+  overflow-y: auto;
+  padding-top: 90px; }
+  .overlay.overlay-visible {
+    opacity: 1;
+    visibility: visible; }
 
 .navbar {
   position: fixed;
@@ -7185,7 +7208,8 @@ body {
   height: 60px;
   width: 100%;
   background-color: #1c2a35;
-  border-bottom: 1px solid #36444f; }
+  border-bottom: 1px solid #36444f;
+  z-index: 1000; }
   .navbar .nav-logo {
     width: 170px;
     height: auto;
@@ -7197,7 +7221,15 @@ body {
       display: block;
       width: 100%;
       height: 3px;
-      background-color: #76bce0; }
+      background-color: #76bce0;
+      transition: all 0.6s cubic-bezier(0.59, -1.04, 0.53, 1.95); }
+    .navbar .burger-stack.menu-show .burger-item:first-child {
+      transform: translateY(10px) rotate(-45deg); }
+    .navbar .burger-stack.menu-show .burger-item:nth-child(2) {
+      transform: translateX(30px) rotate(180deg);
+      opacity: 0; }
+    .navbar .burger-stack.menu-show .burger-item:nth-child(3) {
+      transform: translateY(-10px) rotate(45deg); }
 
 * {
   font-family: 'Muli', sans-serif; }
@@ -7248,6 +7280,15 @@ h3 {
   background-color: #1c2a35;
   border: 1px solid #36444f;
   padding: 15px 20px; }
+
+.table-dark {
+  background-color: #171e24; }
+  .table-dark thead td {
+    border-top: none;
+    border-bottom: 1px solid #36444f; }
+  .table-dark tbody tr:not(:last-child) td {
+    border-top: none;
+    border-bottom: 1px solid #36444f; }
 
 .page-dashboard .car-entry {
   border: 1px solid #36444f;

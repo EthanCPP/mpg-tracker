@@ -8,7 +8,7 @@
         <link rel="stylesheet" type="text/css" href="css/main.css">
         <title>MPG Tracker</title>
     </head>
-    <body class="page-new-recording-complete">
+    <body class="page-delete-car">
         <div class="app">
             <div class="navbar">
                 <img src="img/mpg-tracker-logo.png" class="nav-logo" />
@@ -24,9 +24,10 @@
                     <h3 class="car-details text-center">Loading..</h3>
 
                     <div class="pillbox mt-5">
-                        <h3>All set</h3>
-                        <p>That's all for now! Drive safely, and check back in straight after you've filled your tank to the top again (as long as it's safe to do so).</p>
-                        <a href="car-view.html" class="btn btn-primary">Finish</a>
+                        <h3>Delete car</h3>
+                        <p>Are you sure you want to delete this car? All related data will be lost forever.</p>
+                        <button type="button" id="btn-delete-car" class="btn btn-danger">Yes, delete</button>
+                        <a href="car-view.html" class="btn btn-primary">Back</a>
                     </div>
                 </div>
             </div>
@@ -34,6 +35,6 @@
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/lib/jquery.min.js"></script>
         <script type="text/javascript" src="js/global.js"></script>
-        <script type="text/javascript" src="js/new-recording-complete.js"></script>
+        <script type="text/javascript" src="js/delete-car.js"></script>
     </body>
 </html>
