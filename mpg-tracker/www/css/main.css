@@ -7273,6 +7273,9 @@ h3 {
   font-size: 16px;
   line-height: 21px; }
 
+.h-100 {
+  height: 100%; }
+
 .main-content {
   margin-top: 80px; }
 
@@ -7289,6 +7292,9 @@ h3 {
   .table-dark tbody tr:not(:last-child) td {
     border-top: none;
     border-bottom: 1px solid #36444f; }
+
+.page-splash {
+  height: 100%; }
 
 .page-dashboard .car-entry {
   border: 1px solid #36444f;
