@@ -22,9 +22,23 @@ $(document).ready(function() {
         window.location = 'dashboard.html';
     });
 
+    // transition overlay
+    setTimeout(function() {
+        $('body').addClass('body-loaded');
+    }, 100);
+
     // render overlay
     const $overlayContainer = $(`<div class="overlay"></div>`);
     $overlayContainer.insertAfter('.navbar');
+
+    const $overlayDashboard = $(`<a href="dashboard.html" class="overlay-btn">Dashboard</a>`);
+    $overlayContainer.append($overlayDashboard);
+
+    const $overlayCostCalculator = $(`<a href="cost-calculator.html" class="overlay-btn">Cost calculator</a>`);
+    $overlayContainer.append($overlayCostCalculator);
+
+    const $overlayAbout = $(`<a href="about.html" class="overlay-btn">About app</a>`);
+    $overlayContainer.append($overlayAbout);
 
     $('.burger-stack').on('click', function() {
         $(this).toggleClass('menu-show');

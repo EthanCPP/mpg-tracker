@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <title>MPG Tracker</title>
+    </head>
+    <body class="page-cost-calculator">
+        <div class="app">
+            <div class="navbar">
+                <img src="img/mpg-tracker-logo.png" class="nav-logo" />
+                <div class="burger-stack">
+                    <div class="burger-item"></div>
+                    <div class="burger-item"></div>
+                    <div class="burger-item"></div>
+                </div>
+            </div>
+            <div class="main-content">
+                <div class="container">
+                    <h1 class="car-name text-center">Loading..</h1>
+                    <h3 class="car-details text-center">Loading..</h3>
+
+                    <div class="pillbox mt-5 d-none" id="pill-not-available">
+                        <h3>Not available</h3>
+                        <p class="mb-0">This feature is not yet available as your mpg has not yet been calculated.</p>
+                    </div>
+
+                    <div id="pill-available d-none">
+                        <div class="pillbox mt-5" id="pill-cost-intro">
+                            <h3>Cost Calculator</h3>
+                            <p class="mb-0">Use this tool to estimate the cost of a journey based off of your most recent mpg calculation.</p>
+                        </div>
+
+                        <div class="pillbox mt-5 d-none" id="pill-cost-final">
+                            <h3>Estimated cost</h3>
+                            <p class="mb-0">This journey will cost around <strong style="color: white;">£<span id="cost-display"></span></strong> in fuel.</p>
+                        </div>
+
+                        <form action="" method="get" class="mt-4" id="cost-calculator-form">
+                            <label for="i-miles">Distance:</label>
+                            <input type="number" step="0.1" class="form-control" name="i-miles" id="i-miles" placeholder="e.g. 300" />
+                            <p class="text-right">mi</p>
+                            <label for="i-cost">Fuel price (p / litre)</label>
+                            <input type="number" step="0.1" class="form-control" name="i-cost" id="i-cost" placeholder="e.g. 118.9" />
+                            <p class="text-right">p/l</p>
+                            <input type="submit" class="btn btn-primary mt-2" value="Next" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/lib/jquery.min.js"></script>
+        <script type="text/javascript" src="js/global.js"></script>
+        <script type="text/javascript" src="js/cost-calculator.js"></script>
+    </body>
+</html>

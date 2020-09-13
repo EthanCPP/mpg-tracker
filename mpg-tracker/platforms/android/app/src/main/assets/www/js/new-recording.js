@@ -5,11 +5,13 @@ $(document).ready(function() {
         $('.car-name').html(car_item.car_name);
         $('.car-details').html(car_item.car_make + ' ' + car_item.car_model);
 
+        $('[name="i-mileage"]').prop('value', car_item.mileage_end);
+
         $('#new-recording-form').on('submit', function(e) {
             e.preventDefault();
             e.stopPropagation();
 
-            const mileage = $('[name="i-mileage"]').val();
+            const mileage = parseInt($('[name="i-mileage"]').val());
 
             if (mileage && mileage > 0) {
 

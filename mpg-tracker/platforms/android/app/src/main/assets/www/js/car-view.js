@@ -22,7 +22,7 @@ $(document).ready(function() {
 
         if (car_item.history) {
             $('#data-history').removeClass('d-none');
-
+            
             Object.entries(car_item.history).forEach(item => {
                 const date = new Date(parseInt(item[0]));
                 const dateFormatted = date.getFullYear() + '-' + date.getMonth() + '-' + date.getDate();

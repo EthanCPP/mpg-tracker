@@ -10,8 +10,8 @@ $(document).ready(function() {
             e.stopPropagation();
 
             if ($('[name="i-current-mileage"]').val() != '' && $('[name="i-litres-used"]').val() != '') {
-                const currentMileage = $('[name="i-current-mileage"]').val();
-                const litresUsed = $('[name="i-litres-used"]').val();
+                const currentMileage = parseInt($('[name="i-current-mileage"]').val());
+                const litresUsed = parseFloat($('[name="i-litres-used"]').val());
 
                 if (currentMileage > car_item.mileage_start) {
 
