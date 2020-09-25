@@ -23,9 +23,13 @@ $(document).ready(function() {
             const cost_used = (fuel_used * fuel_price) / 100;
             const cost_final = Math.ceil(cost_used * 100) / 100;
 
+            carData[current_car]['recent_fuel_price'] = fuel_price;
+
+            localStorage.setItem('car_data', JSON.stringify(carData));
+
             $('#pill-cost-final').removeClass('d-none');
             $('#pill-cost-intro').addClass('d-none');
-            $('#cost-display').html(cost_final);
+            $('#cost-display').html(cost_final.toLocaleString());
         });
     }
 });

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <title>MPG Tracker</title>
+    </head>
+    <body class="page-my-statistics">
+        <div class="app">
+            <div class="navbar">
+                <img src="img/mpg-tracker-logo.png" class="nav-logo" />
+                <div class="burger-stack">
+                    <div class="burger-item"></div>
+                    <div class="burger-item"></div>
+                    <div class="burger-item"></div>
+                </div>
+            </div>
+            <div class="main-content">
+                <div class="container">
+                    <h1 class="car-name text-center">Loading..</h1>
+                    <h3 class="car-details text-center">Loading..</h3>
+
+                    <div class="pillbox mt-5" id="nothing-to-show">
+                        <h3>Nothing to show :(</h3>
+                        <p class="mb-0">You need to have at least two MPG recordings to use this feature.</p>
+                    </div>
+
+                    <div class="d-none" id="my-stats">
+                        <div class="pillbox mt-5">
+                            <h3>Statistics</h3>
+                            <p class="mb-0">This feature can help give you pointers to improve your fuel consumption, and lead to cheaper running costs.</p>
+                        </div>
+
+                        <div class="pillbox mt-3">
+                            <h3>Recent Improvement</h3>
+                            <p class="mb-2">Your fuel consumption has <strong id="improvement-type">IMPROVED</strong> by <strong id="improvement-amount">12.3%</strong> since your last reading.</p>
+                            <p class="mb-0" id="improvement-tip"></p>
+                        </div>
+
+                        <div class="pillbox mt-3 d-none" id="annual-mileage">
+                            <h3>Annual Mileage</h3>
+                            <p class="mb-0">Based on fuel consumption calculations over the past year, your estimated annual mileage is <strong id="mileage-amount">0 miles</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/lib/jquery.min.js"></script>
+        <script type="text/javascript" src="js/global.js"></script>
+        <script type="text/javascript" src="js/my-statistics.js"></script>
+    </body>
+</html>

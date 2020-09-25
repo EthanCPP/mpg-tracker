@@ -37,6 +37,9 @@ $(document).ready(function() {
     const $overlayCostCalculator = $(`<a href="cost-calculator.html" class="overlay-btn">Cost calculator</a>`);
     $overlayContainer.append($overlayCostCalculator);
 
+    const $overlayStatistics = $(`<a href="my-statistics.html" class="overlay-btn">Statistics</a>`);
+    $overlayContainer.append($overlayStatistics);
+
     const $overlayAbout = $(`<a href="about.html" class="overlay-btn">About app</a>`);
     $overlayContainer.append($overlayAbout);
 

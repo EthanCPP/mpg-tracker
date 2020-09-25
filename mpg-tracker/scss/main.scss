@@ -202,6 +202,10 @@ h3 {
     background-color: $color-front;
     border: 1px solid $color-divide;
     padding: 15px 20px;
+
+    strong {
+        color: #9aa4ad;
+    }
 }
 
 .table-dark {
@@ -304,4 +308,8 @@ h3 {
             }
         }
     }
+}
+
+.page-my-statistics {
+
 }

@@ -34,6 +34,32 @@ $(document).ready(function() {
                     carData[current_car]['history'][currentDate.getTime()]['mileage_used'] = mileageUsed;
                     carData[current_car]['history'][currentDate.getTime()]['mpg'] = mpg;
 
+                    // avg yearly miles calculator
+                    if (carData[current_car]['yearly_miles']) {
+                        const yearStart = new Date(carData[current_car]['yearly_miles']['year_start']['date']);
+
+                        if (currentDate.getFullYear() > yearStart.getFullYear()) {
+                            // Broken into a new year, roll over data
+                            const yearStartDate = new Date(currentDate.getFullYear());
+
+                            carData[current_car]['yearly_miles']['year_start']['date'] = yearStartDate.getTime();
+                            carData[current_car]['yearly_miles']['year_start']['mileage'] = carData[current_car]['yearly_miles']['year_end']['mileage'];
+                            carData[current_car]['yearly_miles']['year_end']['date'] = currentDate.getTime();
+                            carData[current_car]['yearly_miles']['year_end']['mileage'] = currentMileage;
+                        } else {
+                            carData[current_car]['yearly_miles']['year_end']['date'] = currentDate.getTime();
+                            carData[current_car]['yearly_miles']['year_end']['mileage'] = currentMileage;
+                        }
+                    } else {
+                        carData[current_car]['yearly_miles'] = {};
+                        carData[current_car]['yearly_miles']['year_start'] = {};
+                        carData[current_car]['yearly_miles']['year_end'] = {};
+                        carData[current_car]['yearly_miles']['year_start']['date'] = currentDate.getTime();
+                        carData[current_car]['yearly_miles']['year_start']['mileage'] = currentMileage;
+                        carData[current_car]['yearly_miles']['year_end']['date'] = currentDate.getTime();
+                        carData[current_car]['yearly_miles']['year_end']['mileage'] = currentMileage;
+                    }
+
                     // whipe the current recording
                     carData[current_car]['mileage_start'] = 0;
                     carData[current_car]['mileage_start_time'] = 0;
